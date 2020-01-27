@@ -1,0 +1,201 @@
+@import "materialize";
+
+html {
+	background-color: #f6f4f1;
+	color: #424242;
+	font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+	-ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+	width: 0 !important
+}
+
+body {
+  display: flex;
+	flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+	padding-bottom: 5vh;
+	padding-top: 7vh;
+}
+
+.footer {
+	background-color: #111 !important;
+	color: #bdbdbd !important;
+	height: 5rem !important;
+	line-height: 5rem !important;
+}
+
+nav {
+	background-color: #fff;
+	height: 80px;
+	line-height: 80px;
+}
+
+.nav-links {
+	color: #616161;
+}
+
+.brand-logo {
+	color: #666 !important;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 3rem !important;
+	font-variant: small-caps;
+}
+
+.dropdown-content li a {
+	color: #666;
+	font-size: 0.9rem;
+}
+
+#dropdown-header {
+	font-size: 1rem;
+	height: 64px;
+	line-height: 64px;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.container {
+	text-align: center;
+}
+
+.card-content {
+	padding: 3rem 4rem 3rem 4rem;
+}
+
+.profile-container {
+	font-size: 1.2rem;
+	width: 60rem;
+}
+
+.tabs-container {
+	background-color: #fff;
+	box-shadow: 0 2px 5px 0;
+	font-size: 1rem;
+	height: auto;
+	width: 60rem;
+}
+
+.tabs {
+	background-color: #212121;
+}
+
+.tabs .tab a {
+	color: #9e9e9e;
+}
+
+.tabs .tab a:hover {
+	color: #fafafa;
+}
+
+.tabs .tab .active {
+	color: #fafafa;
+}
+
+.tabs .indicator {
+	background-color: #d50000;
+	height: 3px;
+}
+
+.tabs-content {
+	font-size: 14px;
+	padding: 30px 50px 30px 50px !important;
+	text-align: justify;
+
+	h5 {
+		color: #616161;
+		font-size: 1.3rem;
+	}
+}
+
+.card {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.profile {
+	margin-bottom: 0;
+}
+
+#pub_summary {
+	font-style: normal;
+}
+.profile-content {
+  font-size: 14px;
+  margin-left: 3em;
+	padding-bottom: 4rem;
+  text-align: justify;
+}
+
+.profile-content > span {
+	display: block;
+	padding-bottom: 2em;
+}
+
+.card-action {
+	padding: 10px 20px 10px 20px !important;
+}
+
+.carousel-container {
+	height: 50px;
+	padding-bottom: 6rem;
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.carousel {
+	height: 330px;
+}
+
+.btn-goto {
+	height: 90px;
+	width: 90px;
+}
+
+.card-action {
+	padding: 0px 0px 0px 0px !important;
+}
+
+.download-btn {
+	font-size: 11px;
+}
+
+.hide {
+	display: none;
+}
+
+.about {
+	min-height: 10rem;
+	font-style: normal;
+}
+
+.publications {
+
+	h5 {
+		padding-bottom: 1rem;
+	}
+}
+
+.transparent {
+	filter: alpha(opacity=80); /* For IE8 and earlier */
+	opacity: 0.8;
+}
+
+.card-image {
+	height: 350px !important;
+
+	img {
+		height: 350px !important;
+	}
+
+	h5 {
+		font-size: 16px;
+		padding: 20px 20px 20px 20px;
+	}
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+    </script>
+  <![endif]-->
+  <!--Import Google fonts-->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Julius+Sans+One'>
+  <!--Import Google icons-->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
+</head>
+<body>
+  <header>
+    <%= render 'layouts/header' %>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    <%= render 'layouts/footer' %>
+  </footer>
+  <!--Import JQuery-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!--Import Materialize JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<% provide(:title, "Home") %>
+<div class="container profile-container" id="profile">
+	<div class="card white card-content">
+		<div class="carousel-container">
+			<div class="carousel">
+				<a class="carousel-item" href="#algorithm_and_web"><img class="c-image" id="c-algorithm_and_web" src="/assets/algorithm_and_web.png"></a>
+				<a class="carousel-item" href="#fashion"><img class="c-image" id="c-fashion" src="/assets/fashion.png"></a>
+				<a class="carousel-item" href="#finance"><img class="c-image" id="c-finance" src="/assets/finance.png"></a>
+				<a class="carousel-item" href="#memory"><img class="c-image" id="c-memory" src="/assets/memory.png"></a>
+				<a class="carousel-item" href="#systems_theory"><img class="c-image" id="c-systems_theory" src="/assets/systems_theory.png"></a>
+				<a class="carousel-item" href="#other_activities"><img class="c-image" id="c-other_activities" src="/assets/other_activities.png"></a>
+			</div>
+		</div>
+		<a class="waves-effect waves-light btn-flat btn-goto" onmouseover="set_transparent()" onmouseout="unset_transparent()" onclick="goto_anchor()"></a>
+		<div class="row profile">
+			<div class="col s4 m4">
+				<div class="card">
+					<div class="card-image">
+						<img src="/assets/profile.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="col s8 m8">
+				<div class="profile-content">
+					<% if @profile.biography %>
+						<%== @profile.biography %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container tabs-container hide" id="publication">
+	<div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s2"><a href="#algorithm_and_web">Algorithms</a></li>
+        <li class="tab col s2"><a href="#fashion">Fashion</a></li>
+        <li class="tab col s2"><a href="#finance">Finance</a></li>
+        <li class="tab col s2"><a href="#memory">Memory</a></li>
+				<li class="tab col s2"><a href="#systems_theory">Systems Theory</a></li>
+				<li class="tab col s2"><a href="#other_activities">Other</a></li>
+      </ul>
+    </div>
+    <div id="algorithm_and_web" class="col s12 tabs-content">
+			<div class="publications">
+				<h5>Publications</h5>
+				<% @publications.reverse_each do |publication| %>
+					<% if publication.category == "algorithm_and_web" %>
+					<div class="row profile">
+						<div class="col s4 m4">
+							<div class="card">
+								<div class="card-image">
+									<% if !publication.image_link.blank? %>
+									<img src="https://drive.google.com/uc?export=download&id=<%= publication.image_link.split("id=")[1] %>">
+									<% else %>
+									<h5>Image Unavailable</h5>
+									<% end %>
+								</div>
+								<div class="card-action">
+									<div class="row">
+										<div class="col m12">
+											<div class="download-btn">
+												<a class="btn-flat" href="<%= publication.link %>" target="new"><i class="material-icons left">link</i>full text (pdf)</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col s8 m8">
+							<div class="profile-content">
+								<span>
+									<b><%= publication.title %></b>
+								</span>
+								<span id = pub_summary>
+									<%= publication.summary %>
+								</span>
+								<span>
+									<%= publication.source %>
+								</span>
+							</div>
+						</div>
+					</div>
+					<% end %>
+			  <% end %>
+			</div>
+		</div>
+    <div id="fashion" class="col s12 tabs-content">
+			<div class="publications">
+				<h5>Publications</h5>
+				<% @publications.reverse_each do |publication| %>
+					<% if publication.category == "fashion" %>
+					<div class="row profile">
+						<div class="col s4 m4">
+							<div class="card">
+								<div class="card-image">
+									<% if !publication.image_link.blank? %>
+									<img src="https://drive.google.com/uc?export=download&id=<%= publication.image_link.split("id=")[1] %>">
+									<% else %>
+									<h5>Image Unavailable</h5>
+									<% end %>
+								</div>
+								<div class="card-action">
+									<div class="row">
+										<div class="col m12">
+											<div class="download-btn">
+												<a class="btn-flat" href="<%= publication.link %>" target="new"><i class="material-icons left">link</i>full text (pdf)</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col s8 m8">
+							<div class="profile-content">
+								<span>
+									<b><%= publication.title %></b>
+								</span>
+								<span id = pub_summary>
+									<%= publication.summary %>
+								</span>
+								<span>
+									<%= publication.source %>
+								</span>
+							</div>
+						</div>
+					</div>
+					<% end %>
+			  <% end %>
+			</div>
+		</div>
+    <div id="finance" class="col s12 tabs-content">
+			<div class="publications">
+				<h5>Publications</h5>
+				<% @publications.reverse_each do |publication| %>
+					<% if publication.category == "finance" %>
+					<div class="row profile">
+						<div class="col s4 m4">
+							<div class="card">
+								<div class="card-image">
+									<% if !publication.image_link.blank? %>
+									<img src="https://drive.google.com/uc?export=download&id=<%= publication.image_link.split("id=")[1] %>">
+									<% else %>
+									<h5>Image Unavailable</h5>
+									<% end %>
+								</div>
+								<div class="card-action">
+									<div class="row">
+										<div class="col m12">
+											<div class="download-btn">
+												<a class="btn-flat" href="<%= publication.link %>" target="new"><i class="material-icons left">link</i>full text (pdf)</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col s8 m8">
+							<div class="profile-content">
+								<span>
+									<b><%= publication.title %></b>
+								</span>
+								<span id = pub_summary>
+									<%= publication.summary %>
+								</span>
+								<span>
+									<%= publication.source %>
+								</span>
+							</div>
+						</div>
+					</div>
+					<% end %>
+			  <% end %>
+			</div>
+		</div>
+    <div id="memory" class="col s12 tabs-content">
+			<div class="publications">
+				<h5>Publications</h5>
+				<% @publications.reverse_each do |publication| %>
+					<% if publication.category == "memory" %>
+					<div class="row profile">
+						<div class="col s4 m4">
+							<div class="card">
+								<div class="card-image">
+									<% if !publication.image_link.blank? %>
+									<img src="https://drive.google.com/uc?export=download&id=<%= publication.image_link.split("id=")[1] %>">
+									<% else %>
+									<h5>Image Unavailable</h5>
+									<% end %>
+								</div>
+								<div class="card-action">
+									<div class="row">
+										<div class="col m12">
+											<div class="download-btn">
+												<a class="btn-flat" href="<%= publication.link %>" target="new"><i class="material-icons left">link</i>full text (pdf)</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col s8 m8">
+							<div class="profile-content">
+								<span>
+									<b><%= publication.title %></b>
+								</span>
+								<span id = pub_summary>
+									<%= publication.summary %>
+								</span>
+								<span>
+									<%= publication.source %>
+								</span>
+							</div>
+						</div>
+					</div>
+					<% end %>
+			  <% end %>
+			</div>
+		</div>
+		<div id="systems_theory" class="col s12 tabs-content">
+			<div class="publications">
+				<h5>Publications</h5>
+				<% @publications.reverse_each do |publication| %>
+					<% if publication.category == "systems_theory" %>
+					<div class="row profile">
+						<div class="col s4 m4">
+							<div class="card">
+								<div class="card-image">
+									<% if !publication.image_link.blank? %>
+									<img src="https://drive.google.com/uc?export=download&id=<%= publication.image_link.split("id=")[1] %>">
+									<% else %>
+									<h5>Image Unavailable</h5>
+									<% end %>
+								</div>
+								<div class="card-action">
+									<div class="row">
+										<div class="col m12">
+											<div class="download-btn">
+												<a class="btn-flat" href="<%= publication.link %>" target="new"><i class="material-icons left">link</i>full text (pdf)</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col s8 m8">
+							<div class="profile-content">
+								<span>
+									<b><%= publication.title %></b>
+								</span>
+								<span id = pub_summary>
+									<%= publication.summary %>
+								</span>
+								<span>
+									<%= publication.source %>
+								</span>
+							</div>
+						</div>
+					</div>
+					<% end %>
+			  <% end %>
+			</div>
+		</div>
+    <div id="other_activities" class="col s12 tabs-content">
+			<div class="publications">
+				<h5>Publications</h5>
+				<% @publications.reverse_each do |publication| %>
+					<% if publication.category == "other" %>
+					<div class="row profile">
+						<div class="col s4 m4">
+							<div class="card">
+								<div class="card-image">
+									<% if !publication.image_link.blank? %>
+									<img src="https://drive.google.com/uc?export=download&id=<%= publication.image_link.split("id=")[1] %>">
+									<% else %>
+									<h5>Image Unavailable</h5>
+									<% end %>
+								</div>
+								<div class="card-action">
+									<div class="row">
+										<div class="col m12">
+											<div class="download-btn">
+												<a class="btn-flat" href="<%= publication.link %>" target="new"><i class="material-icons left">link</i>full text (pdf)</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col s8 m8">
+							<div class="profile-content">
+								<span>
+									<b><%= publication.title %></b>
+								</span>
+								<span id = pub_summary>
+									<%= publication.summary %>
+								</span>
+								<span>
+									<%= publication.source %>
+								</span>
+							</div>
+						</div>
+					</div>
+					<% end %>
+			  <% end %>
+			</div>
+		</div>
+  </div>
+</div>

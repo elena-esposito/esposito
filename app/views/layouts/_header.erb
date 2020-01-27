@@ -1,0 +1,32 @@
+<div class="navbar">
+  <nav>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a id="dropdown-header" href="javascript:;">Publications</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:;" onclick="switch_tab('algorithm_and_web')">Algorithm & Web</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:;" onclick="switch_tab('fashion')">Fashion</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:;" onclick="switch_tab('finance')">Finance</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:;" onclick="switch_tab('memory')">Memory</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:;" onclick="switch_tab('systems_theory')">Systems Theory</a></li>
+      <li class="divider"></li>
+      <li><a href="javascript:;" onclick="switch_tab('other_activities')">Other Activities</a></li>
+    </ul>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo center">Elena Esposito</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <% if @profile %>
+        <li><a class="nav-links" href="<%= @profile.cv_link %>" target="new">Curriculum Vitae</a></li>
+        <li><a class="nav-links" href="mailto:<%= @profile.email %>" target="_top">Email</a></li>
+      <% end %>
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li id="profile-link" class="active"><a class="nav-links" href="/">Biography</a></li>
+        <li id="publication-link"><a class="nav-links" href="javascript:;" onclick="switch_tab('algorithm_and_web')">Publications</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
